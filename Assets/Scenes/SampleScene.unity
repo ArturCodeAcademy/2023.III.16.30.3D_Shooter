@@ -195,10 +195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871b875759fbd044cbe04f400ca4108f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _verticalAngle: 0
-  _turnSpeed: 0.1
+  _verticalAngle: 180
+  _turnSpeed: 10
   _verticalInversion: 0
-  _virtualCamera: {fileID: 0}
+  _virtualCamera: {fileID: 2043712258}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
