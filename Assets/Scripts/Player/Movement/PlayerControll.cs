@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 			_playerMovement.Move(hMove);
 	}
 
-	private void ResetJumps()
+	private void ResetJumps(float _ = default)
 	{
 		_leftJumps = _jumpCount;
 	}
