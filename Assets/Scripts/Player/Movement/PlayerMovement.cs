@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         var collisionFlags = _controller.Move(moveVector);
         if (collisionFlags == CollisionFlags.Below)
         {
-            if (IsGrounded)
+            if (!IsGrounded)
                 OnGetGrounded?.Invoke(_verticalVelocity);
 			IsGrounded = true;
 			_groundedTimerCounter = _grounedTimer;
