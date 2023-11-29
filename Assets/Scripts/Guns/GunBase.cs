@@ -4,7 +4,7 @@ using UnityEngine;
 public class GunBase : MonoBehaviour
 {
 	[SerializeField, Min(0.01f)] public float _fireRate;
-	[SerializeField, Range(0, 180)] private float _fireSpread;
+	[SerializeField, Range(0, 10)] private float _fireSpread;
 	[SerializeField] GameObject _hole;
 	[SerializeField] GameObject _shootEffect;
 	[SerializeField] Transform _muzzle;

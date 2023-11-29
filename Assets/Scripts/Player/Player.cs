@@ -7,5 +7,6 @@ public class Player : MonoBehaviour
 	private void Awake()
 	{
 		Instance = this;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 }
