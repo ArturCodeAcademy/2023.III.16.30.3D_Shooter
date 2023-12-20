@@ -1645,6 +1645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fireRate: 10
+  _damage: 3
   _fireSpread: 4
   _hole: {fileID: 7278460395501356763, guid: c40b738dc532abf498a517f56a5c0c39, type: 3}
   _shootEffect: {fileID: 5810592193617416002, guid: c3bfd4954f45081458c243a8ff3f59a7, type: 3}
@@ -1794,6 +1795,7 @@ GameObject:
   - component: {fileID: 1359196384}
   - component: {fileID: 1359196385}
   - component: {fileID: 1359196386}
+  - component: {fileID: 1359196387}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -1810,7 +1812,7 @@ Transform:
   m_GameObject: {fileID: 1359196383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.44537, y: 200, z: 123.40223}
+  m_LocalPosition: {x: 137.94537, y: 200, z: 123.40223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1877,7 +1879,42 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   _text: {fileID: 1705802097}
-  _format: '{2:0}'
+  _format: '{0:0}'
+--- !u!114 &1359196387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359196383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0102a59073c67f94bbe5ef33d0c24773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _detach:
+  - {fileID: 1267933690117546}
+  - {fileID: 1101137403857250}
+  - {fileID: 1225410595717028}
+  - {fileID: 1077184036592190}
+  - {fileID: 1211224403783606}
+  - {fileID: 1086495520931092}
+  - {fileID: 1078539452547538}
+  - {fileID: 1994010949977852}
+  - {fileID: 1799868055005610}
+  - {fileID: 1421628827700134}
+  - {fileID: 1562040111305954}
+  - {fileID: 1917716795676568}
+  _destroy:
+  - {fileID: 1066708541666498}
+  - {fileID: 1943126143}
+  - {fileID: 647266461}
+  - {fileID: 970702588}
+  - {fileID: 1705802096}
+  _detachLifeTime: 15
+  _explosionForce: 30
+  _explosionRadius: 5
+  _explosionPrefab: {fileID: 198917022394846920, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
 --- !u!1 &1399791848
 GameObject:
   m_ObjectHideFlags: 3

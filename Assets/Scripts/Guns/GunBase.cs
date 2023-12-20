@@ -4,6 +4,7 @@ using UnityEngine;
 public class GunBase : MonoBehaviour
 {
 	[SerializeField, Min(0.01f)] public float _fireRate;
+	[SerializeField, Min(0.01f)] public float _damage;
 	[SerializeField, Range(0, 10)] private float _fireSpread;
 	[SerializeField] GameObject _hole;
 	[SerializeField] GameObject _shootEffect;
@@ -34,7 +35,10 @@ public class GunBase : MonoBehaviour
 
 			if (hit.collider is not null && _hole is not null)
 				Instantiate(_hole, hit.point, Quaternion.LookRotation(hit.normal, Vector3.up));
-		}
+
+            if (hit.transform?.TryGetComponent(out IHittable hittable) ?? false)
+				hittable.Hit(_damage);			
+        }
 	}
 
 	public static Vector3 GetDirectionWithSpread(float bulletSpread, Vector3 forward)
